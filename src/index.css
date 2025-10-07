@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+:root {
+  --yellow: #fc3;
+  --blue: #165a9b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+}
