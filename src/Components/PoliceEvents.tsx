@@ -51,7 +51,7 @@ const PoliceEvents = () => {
         {filteredEvents.map((ev) => (
           <li
             key={ev.id}
-            className="flex flex-col items-start h-35 border-2 border-[var(--blue)] bg-[var(--blue)] text-white rounded-md  w-130 m-[1rem] p-[2rem]"
+            className="flex flex-col items-start h-35 border-2 bg-[var(--blue)] text-white rounded-md  w-130 m-[1rem] p-[2rem] hover:border-2 hover:border-blue-950 hover:scale-[1.01] transition-transform duration-100 ease-in-out"
             onClick={() => showMoreDetails(ev.id)}
           >
             <h2 className="font-semibold">{ev.name}</h2>

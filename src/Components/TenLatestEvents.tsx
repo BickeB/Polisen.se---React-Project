@@ -7,9 +7,11 @@ function TenLatestEvents() {
     <>
       <div className="main-container">
         {/* Gör H3:an responsiv */}
-        <h3 className="text-[25px] font-semibold text-[var(--blue)] border-b-2 border-[var(--yellow)] w-[270px] p-1 ml-[100px]">
-          10 senaste händelserna
-        </h3>
+        <div className="title-container">
+          <h3 className="text-[25px] font-semibold text-[var(--blue)] border-b-2 border-[var(--yellow)] w-[300px] p-1 ml-[100px]">
+            10 senaste händelserna
+          </h3>
+        </div>
         <div className="sections-container mb-[5rem] grid grid-cols-1 md:grid-cols-2 max-w-6xl mx-auto gap-x-12 ">
           <div className="left-container">
             <section className="section-list">

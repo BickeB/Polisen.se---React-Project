@@ -1,33 +1,22 @@
-function SearchInputField({ search, setSearch }) {
+function SearchInputField({
+  search,
+  setSearch,
+}: {
+  search: string;
+  setSearch: (value: string) => void;
+}) {
   return (
     <div>
       <form className="flex items-center max-w-sm mx-auto">
         <label htmlFor="simple-search" className="sr-only">
           Search
         </label>
-        <div className="relative w-full">
-          <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-            <svg
-              className="w-4 h-4 text-gray-500 dark:text-gray-400"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 18 20"
-            >
-              <path
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M3 5v10M3 5a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm0 10a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm12 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 0V6a3 3 0 0 0-3-3H9m1.5-2-2 2 2 2"
-              />
-            </svg>
-          </div>
+        <div className=" w-full">
           <input
             type="text"
             id="simple-search"
-            className="h-[3rem] bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-            placeholder="Sök efter händelse"
+            className="h-[3rem] bg-gray-50 border-2 border-gray-600 text-gray-900 text-m rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            placeholder="Sök efter händelse, brottstyp, plats, datum..."
             required
             onChange={(e) => {
               setSearch(e.target.value);
@@ -35,7 +24,7 @@ function SearchInputField({ search, setSearch }) {
             value={search}
           />
         </div>
-        <button
+        {/* <button
           type="submit"
           className="p-2.5 ms-2 text-sm font-medium text-white bg-[var(--blue)] rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
         >
@@ -55,7 +44,7 @@ function SearchInputField({ search, setSearch }) {
             />
           </svg>
           <span className="sr-only">Search</span>
-        </button>
+        </button> */}
       </form>
     </div>
   );
