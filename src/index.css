@@ -9,6 +9,10 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: "Roboto";
+}
+
 h1 {
   font-size: 3rem;
 }

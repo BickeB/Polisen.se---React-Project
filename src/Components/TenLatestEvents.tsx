@@ -6,36 +6,43 @@ function TenLatestEvents() {
   return (
     <>
       <div className="main-container">
-        <h3 className="text-[25px] font-semibold ml-[6.8rem] text-[var(--blue)] border-b-2 border-[var(--yellow)] w-[270px] p-1 mx-auto ">
+        {/* Gör H3:an responsiv */}
+        <h3 className="text-[25px] font-semibold text-[var(--blue)] border-b-2 border-[var(--yellow)] w-[270px] p-1 ml-[100px]">
           10 senaste händelserna
         </h3>
-        <div className="sections-container flex items-center justify-around mb-[5rem] ">
-          <section className="left w-[500px]">
-            <ul>
-              {events.slice(0, 5).map((ev) => (
-                <li
-                  key={ev.id}
-                  className="pt-3 pb-3 border-b-1 border-[var(--yellow)]"
-                >
-                  <h2 className="font-semibold">{ev.name}</h2>
-                  <p className="">{ev.summary}</p>
-                </li>
-              ))}
-            </ul>
-          </section>
-          <section className="right w-[500px]">
-            <ul>
-              {events.slice(5, 10).map((ev) => (
-                <li
-                  key={ev.id}
-                  className="pt-3 pb-3 border-b-1 border-[var(--yellow)]"
-                >
-                  <h2 className="font-semibold">{ev.name}</h2>
-                  <p className="">{ev.summary}</p>
-                </li>
-              ))}
-            </ul>
-          </section>
+        <div className="sections-container mb-[5rem] grid grid-cols-1 md:grid-cols-2 max-w-6xl mx-auto gap-x-12 ">
+          <div className="left-container">
+            <section className="section-list">
+              <ul className="left-list">
+                {events.slice(0, 5).map((ev) => (
+                  <li
+                    key={ev.id}
+                    className="pt-3 pb-3 border-b border-[var(--yellow)] min-h-[100px]"
+                  >
+                    <h2 className="font-semibold">{ev.name}</h2>
+                    <p className="">{ev.summary}</p>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          </div>
+          {
+            <div className="right-container">
+              <section>
+                <ul className="right-list">
+                  {events.slice(5, 10).map((ev) => (
+                    <li
+                      key={ev.id}
+                      className="pt-3 pb-3 border-b border-[var(--yellow)] min-h-[100px]"
+                    >
+                      <h2 className="font-semibold">{ev.name}</h2>
+                      <p className="">{ev.summary}</p>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            </div>
+          }
         </div>
       </div>
     </>
