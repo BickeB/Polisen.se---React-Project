@@ -2,11 +2,12 @@ import { useEffect, useState } from "react";
 
 function useFetchData() {
   const [events, setEvents] = useState<any[]>([]);
+  const API_URL = "https://polisen.se/api/events";
 
   useEffect(() => {
     const eventData = async () => {
       try {
-        const response = await fetch("https://polisen.se/api/events");
+        const response = await fetch(API_URL);
         if (!response.ok) {
           throw new Error("Hämtningen av data misslyckades");
         }

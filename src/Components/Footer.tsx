@@ -1,11 +1,11 @@
 function Footer() {
   return (
     <div>
-      <footer className="bg-[var(--blue)]  dark:bg-gray-900">
+      <footer className="bg-white text-black dark:bg-gray-900">
         <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
           <div className="md:flex md:justify-between">
             <div className="mb-6 md:mb-0">
-              <h3 className="text-[30px] text-[var(--yellow)] font-bold">
+              <h3 className="bg-[var(--blue)] text-[30px] text-[var(--yellow)] font-bold p-2">
                 PolisKollen
               </h3>
               <a href="#" className="flex items-center">
@@ -14,10 +14,10 @@ function Footer() {
             </div>
             <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
               <div>
-                <h2 className="mb-6 text-sm font-semibold text-white">
+                <h2 className="mb-6 text-sm font-semibold text-black">
                   Resources
                 </h2>
-                <ul className="text-white dark:text-gray-400 font-medium">
+                <ul className="text-black dark:text-gray-400 font-medium">
                   <li className="mb-4">
                     <a href="https://flowbite.com/" className="hover:underline">
                       Flowbite
@@ -37,7 +37,7 @@ function Footer() {
           </div>
           <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
           <div className="sm:flex sm:items-center sm:justify-between">
-            <span className="text-sm text-white sm:text-center dark:text-gray-400">
+            <span className="text-sm text-black sm:text-center dark:text-gray-400">
               © 2025{" "}
               <a href="#" className="hover:underline">
                 PolisKollen™
@@ -47,7 +47,7 @@ function Footer() {
             <div className="flex mt-4 sm:justify-center sm:mt-0">
               <a
                 href="#"
-                className="text-white hover:text-gray-900 dark:hover:text-white"
+                className="text-black hover:text-gray-900 dark:hover:text-white"
               >
                 <svg
                   className="w-4 h-4"
@@ -66,7 +66,7 @@ function Footer() {
               </a>
               <a
                 href="#"
-                className="text-white hover:text-gray-900 dark:hover:text-white ms-5"
+                className="text-black hover:text-gray-900 dark:hover:text-white ms-5"
               >
                 <svg
                   className="w-4 h-4"
@@ -81,7 +81,7 @@ function Footer() {
               </a>
               <a
                 href="#"
-                className="text-white hover:text-gray-900 dark:hover:text-white ms-5"
+                className="text-black hover:text-gray-900 dark:hover:text-white ms-5"
               >
                 <svg
                   className="w-4 h-4"
@@ -100,7 +100,7 @@ function Footer() {
               </a>
               <a
                 href="#"
-                className="text-white hover:text-gray-900 dark:hover:text-white ms-5"
+                className="text-black hover:text-gray-900 dark:hover:text-white ms-5"
               >
                 <svg
                   className="w-4 h-4"
@@ -119,7 +119,7 @@ function Footer() {
               </a>
               <a
                 href="#"
-                className="text-white hover:text-gray-900 dark:hover:text-white ms-5"
+                className="text-black hover:text-gray-900 dark:hover:text-white ms-5"
               >
                 <svg
                   className="w-4 h-4"
