@@ -17,87 +17,57 @@ const PoliceEvents = () => {
       ev.datetime.toLowerCase().includes(search.toLowerCase())
   );
 
+  const cities = ["Hela landet", "Stockholm", "Göteborg"];
+  const crimeType = ["Trafikolycka", "Brand", "Misshandel", "Inbrott"];
+
+  const handleFilterButton = (value: string) => {
+    setSearch(value);
+  };
+
   return (
     <section className="main-container bg-[var(--blue)] pt-[5rem] pb-[5rem]">
       <div className="filtering-buttons flex justify-center items-center gap-8 mb-[2.5rem]">
-        <button
-          type="button"
-          className="Hela landet bg-white hover:text-[var(--blue)] border-2 border-[var(--yellow)] text-black text-2xl p-3 rounded-md min-w-[150px] "
-          onClick={() => {
-            setSearch("");
-          }}
-        >
-          Hela landet
-        </button>
-        <button
-          type="button"
-          className="Hela landet bg-white hover:text-[var(--blue)] text-black text-2xl p-3 rounded-md min-w-[150px]"
-          onClick={() => {
-            setSearch("Stockholm");
-          }}
-        >
-          Stockholm
-        </button>
-        <button
-          type="button"
-          className="Hela landet bg-white hover:text-[var(--blue)] text-black text-2xl p-3 rounded-md min-w-[150px]"
-          onClick={() => {
-            setSearch("Göteborg");
-          }}
-        >
-          Göteborg
-        </button>
+        {cities.map((city) => (
+          <button
+            key={city}
+            type="button"
+            className="Hela landet bg-white hover:text-[var(--blue)]  text-black text-2xl p-3 rounded-md min-w-[150px] "
+            onClick={() =>
+              handleFilterButton(city === "Hela landet" ? "" : city)
+            }
+          >
+            {city}
+          </button>
+        ))}
       </div>
 
       <div
         className="brottstyp-container flex justify-center items-center gap-6
       mb-10"
       >
-        <button
-          type="button"
-          className="Hela landet bg-white hover:text-[var(--blue)] text-black text-xl p-3 rounded-md min-w-[90px]"
-          onClick={() => {
-            setSearch("Trafikolycka");
-          }}
-        >
-          Trafikolycka
-        </button>
-        <button
-          type="button"
-          className="Hela landet bg-white hover:text-[var(--blue)] text-black text-xl p-3 rounded-md min-w-[90px]"
-          onClick={() => {
-            setSearch("Brand");
-          }}
-        >
-          Brand
-        </button>
-        <button
-          type="button"
-          className="Hela landet bg-white hover:text-[var(--blue)] text-black text-xl p-3 rounded-md min-w-[90px]"
-          onClick={() => {
-            setSearch("Misshandel");
-          }}
-        >
-          Misshandel
-        </button>
-        <button
-          type="button"
-          className="Hela landet bg-white hover:text-[var(--blue)] text-black text-xl p-3 rounded-md min-w-[90px]"
-          onClick={() => {
-            setSearch("Inbrott");
-          }}
-        >
-          Inbrott
-        </button>
+        {crimeType.map((crime) => (
+          <button
+            key={crime}
+            type="button"
+            className="Hela landet bg-white hover:text-[var(--blue)] text-black text-xl p-3 rounded-md min-w-[90px]"
+            onClick={() =>
+              handleFilterButton(
+                crime === "Trafikolycka" ? "Trafikolycka" : crime
+              )
+            }
+          >
+            {crime}
+          </button>
+        ))}
       </div>
 
       <div
         className="search-inputfield-container mb-5"
         onClick={() => {
-          setSearch("");
+          handleFilterButton("");
         }}
       >
-        {/* Skickar search och setSerach som props till denna komponent (SearchInputField) */}
+        {/* Skickar search och setSearch som props till denna komponent (SearchInputField) */}
         <SearchInputField search={search} setSearch={setSearch} />
       </div>
 
