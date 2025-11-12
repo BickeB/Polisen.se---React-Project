@@ -2,9 +2,9 @@ import policeLogo from "../assets/icons/policeLogo.svg";
 
 function Navbar() {
   return (
-    <div>
-      <nav className="bg-[var(--blue)]">
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+    <div className="w-full">
+      <nav className="bg-[var(--blue)] sm:w-full">
+        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 ">
           <ul className="">
             <h3 className="text-[30px] text-[var(--yellow)] font-bold">
               PolisKollen

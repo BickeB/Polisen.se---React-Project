@@ -17,15 +17,23 @@ const PoliceEvents = () => {
       ev.datetime.toLowerCase().includes(search.toLowerCase())
   );
 
-  const cities = ["Hela landet", "Stockholm", "Göteborg"];
-  const crimeType = ["Trafikolycka", "Brand", "Misshandel", "Inbrott"];
+  const cities = ["Hela landet", "Stockholm", "Göteborg", "Malmö"];
+  const crimeType = [
+    "Alla",
+    "Trafik",
+    "Brand",
+    "Misshandel",
+    "Inbrott",
+    "Stöld",
+  ];
+  /*  const [selectedCity, setSelectedCity] = useState(""); */
 
   const handleFilterButton = (value: string) => {
     setSearch(value);
   };
 
   return (
-    <section className="main-container bg-[var(--blue)] pt-[5rem] pb-[5rem]">
+    <section className="main-container w-full bg-[var(--grey)] pt-[5rem] pb-[5rem] max-sm:">
       <div className="filtering-buttons flex justify-center items-center gap-8 mb-[2.5rem]">
         {cities.map((city) => (
           <button
@@ -49,12 +57,8 @@ const PoliceEvents = () => {
           <button
             key={crime}
             type="button"
-            className="Hela landet bg-white hover:text-[var(--blue)] text-black text-xl p-3 rounded-md min-w-[90px]"
-            onClick={() =>
-              handleFilterButton(
-                crime === "Trafikolycka" ? "Trafikolycka" : crime
-              )
-            }
+            className="Hela landet bg-white hover:text-[var(--blue)] text-black text-[16px] p-3 rounded-md min-w-[90px] "
+            onClick={() => handleFilterButton(crime === "Alla" ? "" : crime)}
           >
             {crime}
           </button>
